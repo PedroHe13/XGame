@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XGame - Jogos e Produtos Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">XGame</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#jogos">Jogos</a>
+                <a href="#suporte">Suporte</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Entre no Mundo Gamer</h1>
+            <p>Descubra os melhores jogos e acessórios para sua experiência épica!</p>
+            <button class="cta-btn" onclick="scrollToSection('produtos')">Compre Agora</button>
+        </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="section" id="produtos">
+        <h2>Produtos em Destaque</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/61dSfDUfFoL._AC_UF1000,1000_QL80_.jpg" alt="Controle">
+                <div class="card-content">
+                    <h3>Controle XGame Pro</h3>
+                    <p>Design ergonômico e resposta ultrarrápida.</p>
+                    <div class="price">R$ 299,90</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://a-static.mlcdn.com.br/1500x1500/headset-gamer-elite-leadership-gamer/webfones2/16964/1cec7ee2309af40a542f70911645c47f.jpeg" alt="Headset">
+                <div class="card-content">
+                    <h3>Headset Gamer Elite</h3>
+                    <p>Som imersivo 7.1 com microfone cristalino.</p>
+                    <div class="price">R$ 399,90</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://m.media-amazon.com/images/I/51VzKIQIloL._AC_UF894,1000_QL80_.jpg" alt="Teclado">
+                <div class="card-content">
+                    <h3>Teclado RGB Nitro</h3>
+                    <p>Iluminação RGB e switches mecânicos.</p>
+                    <div class="price">R$ 249,90</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jogos -->
+    <section class="section" id="jogos">
+        <h2>Jogos em Destaque</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://imgs.crazygames.com/games/kirka-io/cover_16x9-1736260059015.png?metadata=none&quality=40&width=1200&height=630&fit=crop" alt="Jogo">
+                <div class="card-content">
+                    <h3>Kirka</h3>
+                    <p>Ação e tiro Online</p>
+                    <div class="price">Grátis</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://assets.xboxservices.com/assets/dd/82/dd82acda-dfcb-4bbd-b30f-97ed028e6c2a.jpg?n=253691_GLP-Page-Hero-1084_1920x1080_03.jpg" alt="Jogo">
+                <div class="card-content">
+                    <h3>Ea fc 25</h3>
+                    <p>Ação e futebol</p>
+                    <div class="price">R$ 179,90</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://cdn.ageofempires.com/aoe/wp-content/uploads/2024/02/239874_Wallpaper_Desktop_896x813.webp" alt="Jogo">
+                <div class="card-content">
+                    <h3>Age Of Mythology</h3>
+                    <p>Combate intenso e Estrátegico</p>
+                    <div class="price">R$ 149,90</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suporte -->
+    <section class="section" id="suporte">
+        <h2>Suporte ao Cliente</h2>
+        <div class="support-form">
+            <h3>Entre em Contato</h3>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 XGame - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        window.addEventListener('load', () => {
+            document.querySelector('.hero-content').style.opacity = 0;
+            setTimeout(() => {
+                document.querySelector('.hero-content').style.transition = 'opacity 1s';
+                document.querySelector('.hero-content').style.opacity = 1;
+            }, 100);
+        });
+    </script>
+</body>
+</html>
